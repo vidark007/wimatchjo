@@ -1,22 +1,9 @@
-import {StatusBar} from 'expo-status-bar';
-import {Keyboard, SafeAreaView, StyleSheet, Text, TextInput, TouchableWithoutFeedback, View} from 'react-native';
+import {StyleSheet} from 'react-native';
+import LoginPage from "./src/pages/LoginPage";
 
 export default function App() {
     return (
-        <SafeAreaView>
-            <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
-                <View style={styles.container}>
-                    <StatusBar style="auto" backgroundColor={"white"}/>
-                    <Text>Login</Text>
-                    <TextInput/>
-                    <Text>Password</Text>
-                    <TextInput/>
-                </View>
-            </TouchableWithoutFeedback>
-        </SafeAreaView>
-
-
-
+        <LoginPage/>
     );
 }
 
@@ -27,7 +14,14 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
     },
-    inputField:{
-
+    loginFieldContainer:{
+        width: "80%",
+    },
+    inputField: {
+        borderColor: 'grey',
+        borderWidth:0.8,
+        borderRadius:5,
+        marginVertical: 5,
+        paddingHorizontal: 8,
     }
 });
